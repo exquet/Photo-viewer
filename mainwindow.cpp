@@ -21,6 +21,13 @@ void MainWindow::on_actionOpen_triggered()
     if (!fileName.isEmpty()) {
         QPixmap pixmap(fileName);
         if (!pixmap.isNull()) {
+
+            QSize imageSize = pixmap.size();
+            int width = imageSize.width();
+            int height = imageSize.height();
+
+            MainWindow::resize(width + 50, height + 50);
+
             ui->label->setPixmap(pixmap);
             ui->label->adjustSize();
         }
