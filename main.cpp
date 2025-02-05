@@ -1,8 +1,6 @@
 #include "mainwindow.h"
 
 #include <QApplication>
-#include <QLabel>
-#include <QScrollArea>
 
 int main(int argc, char *argv[])
 {
